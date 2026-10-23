@@ -1,0 +1,584 @@
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #831843;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+
+/* TOP NAVIGATION */
+
+nav {
+    background-color: #831843;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #93c5fd;
+}
+
+
+/* TOP BANNER */
+
+.hero {
+    min-height: 360px;
+    padding: 60px 9%;
+    background: linear-gradient(135deg, #fce7f3, #fdf2f8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+/* HELLO MY NAME IS - BLACK */
+.hello {
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.hero h1 {
+    color: #831843;
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero h2 {
+    color: #475569;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.hero p {
+    font-size: 17px;
+}
+
+
+/* AVATAR */
+
+.avatar {
+    width: 170px;
+    height: 170px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 75px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* VIEW MY PROJECTS BUTTON */
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+
+    background-color: #831843;
+    color: #ffffff;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 4px 12px rgba(131, 24, 67, 0.20);
+
+    transition: background-color 0.3s ease,
+                transform 0.2s ease,
+                box-shadow 0.3s ease;
+}
+
+.button:hover {
+    background-color: #db2777;
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 16px rgba(131, 24, 67, 0.30);
+}
+
+
+/* PAGE SECTIONS */
+
+main {
+    display: block;
+}
+
+section {
+    display: block;
+    width: 100%;
+    padding: 55px 9%;
+}
+
+section h2 {
+    color: #831843;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+
+/* ABOUT */
+
+#about {
+    background-color: #f7f9fc;
+}
+
+
+/* PROJECTS */
+
+#projects {
+    background-color: #f7f9fc;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project {
+    background-color: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.project h3 {
+    color: #831843;
+}
+
+.project-link {
+    color: #db2777;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+
+/* SKILLS */
+
+#skills {
+    background-color: #f7f9fc;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills span {
+    background-color: #fce7f3;
+    color: #831843;
+    padding: 9px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #831843;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* SMALL SCREENS */
+
+@media (max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================
+   PROJECT 1 PAGE OVERRIDES
+   ========================================= */
+
+
+/* WHOLE PAGE */
+
+body.project-page {
+    background: #fff8fb !important;
+    background-color: #fff8fb !important;
+    color: #222222 !important;
+}
+
+
+/* NAVIGATION */
+
+.project-page nav {
+    background: #ffffff !important;
+    min-height: auto !important;
+    padding: 18px 7% !important;
+}
+
+.project-page nav .logo {
+    color: #8b1e4f !important;
+}
+
+.project-page nav a {
+    color: #222222 !important;
+    text-decoration: none;
+}
+
+
+/* BURGUNDY BANNER ONLY */
+
+.project-page .project-hero {
+    background: #8b1e4f !important;
+    background-color: #8b1e4f !important;
+
+    min-height: 0 !important;
+    height: auto !important;
+
+    padding: 55px 8% !important;
+    margin: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.project-page .project-hero-text {
+    max-width: 750px;
+}
+
+.project-page .project-hero h1 {
+    color: #ffffff !important;
+    font-size: 46px !important;
+    margin: 8px 0 15px 0 !important;
+}
+
+.project-page .project-hero p {
+    color: #ffffff !important;
+    margin: 0 0 10px 0 !important;
+}
+
+.project-page .project-label {
+    color: #f7c7d9 !important;
+    font-size: 13px !important;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.project-page .project-icon {
+    font-size: 75px;
+}
+
+
+/* MAIN CONTENT */
+
+.project-page main,
+.project-page .project-main {
+    background: #fff8fb !important;
+    background-color: #fff8fb !important;
+
+    width: 85% !important;
+    max-width: 1100px !important;
+
+    margin: 0 auto !important;
+    padding: 25px 0 60px 0 !important;
+
+    color: #222222 !important;
+}
+
+
+/* THIS REMOVES THE HUGE GAPS */
+
+.project-page main section,
+.project-page .project-main section {
+    background: transparent !important;
+
+    min-height: 0 !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 35px 0 !important;
+
+    display: block !important;
+
+    border-bottom: 1px solid #eadde2;
+}
+
+
+/* ALL HEADINGS */
+
+.project-page main h1,
+.project-page main h2,
+.project-page main h3 {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.project-page main h2 {
+    color: #8b1e4f !important;
+
+    font-size: 28px !important;
+    font-weight: 700 !important;
+
+    margin: 0 0 15px 0 !important;
+    padding: 0 !important;
+}
+
+.project-page main h3 {
+    color: #8b1e4f !important;
+}
+
+
+/* PARAGRAPHS */
+
+.project-page main p {
+    color: #222222 !important;
+
+    max-width: 900px;
+
+    line-height: 1.6;
+
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+
+/* RESEARCH QUESTION */
+
+.project-page .question-box {
+    background: #ffffff !important;
+
+    border-left: 5px solid #8b1e4f;
+
+    border-radius: 8px;
+
+    padding: 22px 25px !important;
+
+    margin-top: 15px !important;
+
+    max-width: 850px;
+
+    box-shadow: 0 4px 15px rgba(80, 20, 45, 0.08);
+}
+
+.project-page .question-box p {
+    color: #222222 !important;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    margin: 0 !important;
+}
+
+
+/* PROJECT PROCESS */
+
+.project-page .process-container {
+    display: grid !important;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 15px;
+
+    margin-top: 25px !important;
+}
+
+.project-page .process-step {
+    background: #ffffff !important;
+
+    color: #222222 !important;
+
+    min-height: 100px !important;
+
+    padding: 20px !important;
+
+    border-radius: 8px;
+
+    border-top: 4px solid #8b1e4f;
+
+    box-shadow: 0 4px 15px rgba(80, 20, 45, 0.08);
+}
+
+.project-page .process-step span {
+    color: #c04a7a !important;
+
+    font-weight: bold;
+}
+
+.project-page .process-step h3 {
+    color: #8b1e4f !important;
+
+    font-size: 16px !important;
+
+    margin: 8px 0 0 0 !important;
+}
+
+
+/* PLACEHOLDER BOXES */
+
+.project-page .content-placeholder {
+    background: #f7e8ee !important;
+
+    color: #222222 !important;
+
+    max-width: 850px;
+
+    padding: 20px !important;
+
+    margin-top: 20px !important;
+
+    border-radius: 8px;
+}
+
+
+/* LINKS */
+
+.project-page .project-link,
+.project-page .back-button {
+    display: inline-block;
+
+    background: #8b1e4f !important;
+
+    color: #ffffff !important;
+
+    padding: 10px 18px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+}
+
+
+/* BACK BUTTON */
+
+.project-page .back-link-container {
+    padding: 30px 0 !important;
+}
+
+
+/* FOOTER */
+
+.project-page .project-footer {
+    background: #8b1e4f !important;
+
+    color: #ffffff !important;
+
+    padding: 20px !important;
+
+    text-align: center;
+}
+
+
+/* SMALLER SCREENS */
+
+@media (max-width: 900px) {
+
+    .project-page .process-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-page .project-hero {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .project-page .process-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-page .project-hero h1 {
+        font-size: 36px !important;
+    }
+}
+.about-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+}
+
+.about-card p {
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.about-skills span {
+    background-color: #fbeaf2;
+    color: #8b1e4a;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+}
